@@ -28,7 +28,7 @@ const (
 	//个人密钥
 	secret = "d10c54e4908f08974fxxxxxxxxxxxx"
 	//目标网站
-	targetUrl = "http://2000019.ip138.com/"
+	targetUrl = "http://2021.ip138.com"
 )
 
 func md5v(s string) string {

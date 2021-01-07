@@ -41,11 +41,11 @@ proxy = {"http":"http://" + ip_port}
 #proxy = {"https": "https://" + ip_port}
 print(proxy)
 headers = {"Proxy-Authorization": auth,"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"}
-#r = requests.get("http://2019.ip138.com/ic.asp", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
+#r = requests.get("http://2021.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 #r = requests.get("https://api.ip.la", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 print(headers)
 #http协议可用性检测，每访问一次返回的结果换一个IP即为代理成功
-r = requests.get("http://2019.ip138.com/ic.asp", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
+r = requests.get("http://2021.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 #https协议可用性检测，每访问一次返回的结果换一个IP即为代理成功
 #r = requests.get("https://ip.cn/",headers=headers,proxies=proxy,verify=False,allow_redirects=False)
 print(r.encoding)
