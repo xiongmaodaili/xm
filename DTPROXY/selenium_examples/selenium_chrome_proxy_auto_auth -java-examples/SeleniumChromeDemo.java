@@ -71,7 +71,7 @@ public class SeleniumChromeDemo {
         chromeOptions.addArguments("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");//ua
         chromeOptions.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));//阻止弹出窗口
         chromeOptions.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));//关闭使用ChromeDriver打开浏览器时上部提示语"Chrome正在受到自动软件的控制
-        //更改proxy示例.zip压缩包，background.js文件中username和password为实际订单中的用户名密码
+        //更改proxy-examples.zip压缩包，background.js文件中username和password为实际订单中的用户名密码
         chromeOptions.addExtensions(new File("D:/proxy-examples.zip"));//添加crx代理插件
 
         return new ChromeDriver(chromeOptions);

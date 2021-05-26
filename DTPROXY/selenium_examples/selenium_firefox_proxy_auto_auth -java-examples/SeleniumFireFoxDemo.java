@@ -44,6 +44,7 @@ public class SeleniumFireFoxDemo {
 //    close-proxy-authentication V1.1
 
     // 代理隧道验证信息
+	//修改username和password为实际订单中的用户名密码
     final static String proxyUser = "xxxxxxxxxx";
     final static String proxypass = "xxxxxxxxx";
 
@@ -83,7 +84,7 @@ public class SeleniumFireFoxDemo {
         profile.setPreference("network.proxy.ssl_port", proxyPort);
 
         //添加代理认证插件(该插件支持firefox55版本，下载地址:http://ftp.mozilla.org/pub/firefox/releases/55.0/win64/zh-CN/ 安装该版本后断网并设置浏览器不检查更新以防止自动更新到最新版本)
-        profile.addExtension(new File("F:\\JAVAworkspace\\corejava\\src\\main\\resources\\close_proxy_authentication-1.1-sm+tb+fx.xpi"));
+        profile.addExtension(new File("F:\\xxxxxx\\resources\\close_proxy_authentication-1.1-sm+tb+fx.xpi"));
         String credentials = new String(Base64.getEncoder().encode((proxyUser + ":" + proxypass).getBytes()));
         profile.setPreference("extensions.closeproxyauth.authtoken", credentials);
 
