@@ -11,8 +11,6 @@ is_python3 = (_version[0] == 3)
 
 
 ip = "dynamic.xiongmaodaili.com"
-#企业动态按量
-#port = 8091
 #企业动态按并发
 port = 8091
 

@@ -23,8 +23,6 @@ public class TestProxyExamples {
 			final String url = "http://2021.ip138.com";
 
 			final String ip = "dynamic.xiongmaodaili.com";//这里以正式服务器ip地址为准
-//			企业动态按量
-//			Integer port = 8090;
 			//企业动态按并发
 			Integer port = 8091;
 			String userName = "xxxxxxx";
