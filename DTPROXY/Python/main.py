@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #coding=utf-8
-# æ–°ç”¨æˆ·åªéœ€è¦æ›¿æ¢14è¡Œå’Œ15è¡Œçš„ordernoå’Œsecretå³å¯è¿è¡Œ
+# ĞÂÓÃ»§Ö»ĞèÒªÌæ»»14ĞĞºÍ15ĞĞµÄordernoºÍsecret¼´¿ÉÔËĞĞ
 
 import sys
 import time
@@ -11,50 +11,52 @@ _version = sys.version_info
 
 is_python3 = (_version[0] == 3)
 
-# ä¸ªäººä¸­å¿ƒè·å–ordernoä¸secret
+# ¸öÈËÖĞĞÄ»ñÈ¡ordernoÓësecret
 orderno = "DT2019051422xxxxxxxxxxx"    
 secret = "f163c1a1cd84f2bxxxxxxxxxx"
 ip = "dynamic.xiongmaodaili.com"
-#æŒ‰é‡è®¢å•ç«¯å£
+#°´Á¿¶©µ¥¶Ë¿Ú
 port = "8088"
-#æŒ‰å¹¶å‘è®¢å•ç«¯å£
+#°´²¢·¢¶©µ¥¶Ë¿Ú
 #port = "8089"
 
 ip_port = ip + ":" + port
 
-timestamp = str(int(time.time()))                # è®¡ç®—æ—¶é—´æˆ³
+timestamp = str(int(time.time()))                # ¼ÆËãÊ±¼ä´Á
 txt = ""
 txt = "orderno=" + orderno + "," + "secret=" + secret + "," + "timestamp=" + timestamp
 
 if is_python3:
     txt = txt.encode()
 
-md5_string = hashlib.md5(txt).hexdigest()                 # è®¡ç®—sign
-sign = md5_string.upper()                              # è½¬æ¢æˆå¤§å†™
+md5_string = hashlib.md5(txt).hexdigest()                 # ¼ÆËãsign
+sign = md5_string.upper()                              # ×ª»»³É´óĞ´
 print(sign)
 auth = "sign=" + sign + "&" + "orderno=" + orderno + "&" + "timestamp=" + timestamp + "&change=true"
 
 print(auth)
-#httpåè®®çš„ç½‘ç«™ç”¨æ­¤é…ç½®
+#httpĞ­ÒéµÄÍøÕ¾ÓÃ´ËÅäÖÃ
 proxy = {"http":"http://" + ip_port}
-#httpsåè®®çš„ç½‘ç«™ç”¨æ­¤é…ç½®
+#httpsĞ­ÒéµÄÍøÕ¾ÓÃ´ËÅäÖÃ
 #proxy = {"https": "http://" + ip_port}
 print(proxy)
 headers = {"Proxy-Authorization": auth,"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"}
+#Èç¹û·µ»Ø´íÎó"ÑéÖ¤Ê§°Ü£¬Ã»ÓĞ´«ÈëÕıÈ·µÄÇëÇóÍ·"£¬Ê¹ÓÃ 'Xiongmao-Proxy-Authorization'Õâ¸öÇëÇóÍ·ÈÏÖ¤
+#headers = {"Xiongmao-Proxy-Authorization": auth, "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"}
 #r = requests.get("http://2021.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 #r = requests.get("https://api.ip.la", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 print(headers)
-#httpåè®®å¯ç”¨æ€§æ£€æµ‹ï¼Œæ¯è®¿é—®ä¸€æ¬¡è¿”å›çš„ç»“æœæ¢ä¸€ä¸ªIPå³ä¸ºä»£ç†æˆåŠŸ
+#httpĞ­Òé¿ÉÓÃĞÔ¼ì²â£¬Ã¿·ÃÎÊÒ»´Î·µ»ØµÄ½á¹û»»Ò»¸öIP¼´Îª´úÀí³É¹¦
 r = requests.get("http://2021.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
-#httpsåè®®å¯ç”¨æ€§æ£€æµ‹ï¼Œæ¯è®¿é—®ä¸€æ¬¡è¿”å›çš„ç»“æœæ¢ä¸€ä¸ªIPå³ä¸ºä»£ç†æˆåŠŸ
+#httpsĞ­Òé¿ÉÓÃĞÔ¼ì²â£¬Ã¿·ÃÎÊÒ»´Î·µ»ØµÄ½á¹û»»Ò»¸öIP¼´Îª´úÀí³É¹¦
 #r = requests.get("https://ip.cn/",headers=headers,proxies=proxy,verify=False,allow_redirects=False)
 print(r.encoding)
 print(r.apparent_encoding)
-#httpåè®®æµ‹è¯•é‡‡ç”¨æ­¤ä¸­æ–‡ç¼–ç 
+#httpĞ­Òé²âÊÔ²ÉÓÃ´ËÖĞÎÄ±àÂë
 r.encoding = 'gb2312'
-#httpsåè®®æµ‹è¯•é‡‡ç”¨æ­¤ä¸­æ–‡ç¼–ç 
+#httpsĞ­Òé²âÊÔ²ÉÓÃ´ËÖĞÎÄ±àÂë
 #r.encoding = 'utf-8'
 print(r.encoding)
 print(r.status_code)
 print(r.text)
-print(str(r.elapsed.total_seconds())+"     ç§’")
+print(str(r.elapsed.total_seconds())+"     Ãë")
