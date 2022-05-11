@@ -19,9 +19,9 @@ import (
 
 const (
 	// 代理服务器接口地址,这里以正式服务器端口地址为准
-	proxyServer = "http://dynamic.xiongmaodaili.com:8088"
-	//动态并发产品代理设置为:dynamic.xiongmaodaili.com:8089
-	//动态按量产品需将代理设置为:dynamic.xiongmaodaili.com:8088
+	proxyServer = "http://dtan.xiongmaodaili.com:8088"
+	//动态并发产品代理设置为dtbf.xiongmaodaili.com:8089
+	//动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088
 
 	// 动态代理单号
 	orderno = "DT201907261xxxxxxxxxxxx"

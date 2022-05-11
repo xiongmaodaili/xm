@@ -20,9 +20,9 @@ public class TestProxyExamples {
 
 	public static void main(String[] args) {
 		try {
-			final String url = "http://2021.ip138.com";
+			final String url = "http://2022.ip138.com";
 
-			final String ip = "dynamic.xiongmaodaili.com";//这里以正式服务器ip地址为准
+			final String ip = "dtqybf.xiongmaodaili.com";//这里以正式服务器ip地址为准
 			//企业动态按并发
 			Integer port = 8091;
 			String userName = "xxxxxxx";

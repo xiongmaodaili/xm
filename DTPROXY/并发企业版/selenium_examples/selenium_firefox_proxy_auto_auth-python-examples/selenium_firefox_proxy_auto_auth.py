@@ -17,7 +17,7 @@ PROXY_HELPER_DIR =  'close_proxy_authentication-1.1-sm+tb+fx.xpi'
   
 def test():  
      # HTTP(S)类型代理参数  
-    proxy_host =  'dynamic.xiongmaodaili.com'  
+    proxy_host =  'dtqybf.xiongmaodaili.com'  
     proxy_port =  8091  
     #修改username和password为实际订单中的用户名密码
     proxy_username =  'xxxxxxxx'  

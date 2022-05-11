@@ -15,7 +15,7 @@ sign = sign.toUpperCase();
 
 let options = {
     url:url,
-    proxy: "http://dynamic.xiongmaodaili.com:8089",
+    proxy: "http://dtbf.xiongmaodaili.com:8089",
     headers:{
       'Proxy-Authorization':'sign='+sign+'&orderno='+orderno+"&timestamp="+timestamp
     }

@@ -49,7 +49,7 @@ public class SeleniumFireFoxDemo {
     final static String proxypass = "xxxxxxxxx";
 
     // 代理服务器
-    final static String proxyHost = "dynamic.xiongmaodaili.com";
+    final static String proxyHost = "dtqybf.xiongmaodaili.com";
     final static int proxyPort = 8091;
 
     public static void main(String[] args) throws Exception {

@@ -23,7 +23,8 @@ public class TestDynamic {
 	public static void main(String[] args) throws IOException {
 		final String url = "http://2021.ip138.com";
 		final int port = 8089;//这里以正式服务器端口地址为准
-		final String ip = "dynamic.xiongmaodaili.com";//这里以正式服务器ip地址为准
+		final String ip = "dtbf.xiongmaodaili.com";//这里以正式服务器ip地址为准
+		//动态并发产品代理设置为dtbf.xiongmaodaili.com:8089, 动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088
 		int timestamp = (int) (new Date().getTime()/1000);
 		//以下订单号，secret参数 须自行改动；最后一个参数: true-换ip ,false-不换ip
 		final String authHeader = authHeader("DT21520******NNzLZBtR", "df93fde449*****0e78821c", timestamp,"true");

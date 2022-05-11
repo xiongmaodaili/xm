@@ -15,7 +15,7 @@ let sign = md5.digest('hex');
 sign = sign.toUpperCase();
 
 // HTTP/HTTPS proxy to connect to
-var proxy = process.env.http_proxy || 'http://dynamic.xiongmaodaili.com:8089';
+var proxy = process.env.http_proxy || 'http://dtbf.xiongmaodaili.com:8089';
 console.log('using proxy server %j', proxy);
 
 // HTTPS endpoint for the proxy to connect to

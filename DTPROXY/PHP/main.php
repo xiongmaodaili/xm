@@ -26,7 +26,7 @@ public function immediate(){
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($ch, CURLOPT_PROXY, "http://dynamic.xiongmaodaili.com:8089"); 
+    curl_setopt($ch, CURLOPT_PROXY, "http://dtbf.xiongmaodaili.com:8089"); 
     curl_setopt($ch, CURLOPT_TIMEOUT,120);
   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,6);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

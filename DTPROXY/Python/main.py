@@ -14,11 +14,11 @@ is_python3 = (_version[0] == 3)
 # 个人中心获取orderno与secret
 orderno = "DT2019051422xxxxxxxxxxx"    
 secret = "f163c1a1cd84f2bxxxxxxxxxx"
-ip = "dynamic.xiongmaodaili.com"
+ip = "dtan.xiongmaodaili.com"
 #按量订单端口
 port = "8088"
-#按并发订单端口
-#port = "8089"
+#动态并发产品代理设置为dtbf.xiongmaodaili.com:8089
+#动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088
 
 ip_port = ip + ":" + port
 
