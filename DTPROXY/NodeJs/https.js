@@ -14,12 +14,13 @@ md5.update(txt);
 let sign = md5.digest('hex');
 sign = sign.toUpperCase();
 
+//动态并发产品代理设置为dtbf.xiongmaodaili.com:8089, 动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088
 // HTTP/HTTPS proxy to connect to
-var proxy = process.env.http_proxy || 'http://dtbf.xiongmaodaili.com:8089';
+var proxy = process.env.http_proxy || 'http://dtan.xiongmaodaili.com:8088';
 console.log('using proxy server %j', proxy);
 
 // HTTPS endpoint for the proxy to connect to
-var endpoint = process.argv[2] || 'https://www.baidu.com';
+var endpoint = process.argv[2] || 'https://2022.ip138.com';
 console.log('attempting to GET %j', endpoint);
 var options = url.parse(endpoint);
 options.headers = {

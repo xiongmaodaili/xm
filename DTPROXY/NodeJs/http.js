@@ -12,10 +12,10 @@ let md5 = crypto.createHash('md5');
 md5.update(txt);
 let sign = md5.digest('hex');
 sign = sign.toUpperCase();
-
+//动态并发产品代理设置为dtbf.xiongmaodaili.com:8089, 动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088
 let options = {
     url:url,
-    proxy: "http://dtbf.xiongmaodaili.com:8089",
+    proxy: "http://dtan.xiongmaodaili.com:8088",
     headers:{
       'Proxy-Authorization':'sign='+sign+'&orderno='+orderno+"&timestamp="+timestamp
     }

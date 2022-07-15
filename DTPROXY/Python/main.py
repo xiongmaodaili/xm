@@ -35,10 +35,7 @@ print(sign)
 auth = "sign=" + sign + "&" + "orderno=" + orderno + "&" + "timestamp=" + timestamp + "&change=true"
 
 print(auth)
-#http协议的网站用此配置
-proxy = {"http":"http://" + ip_port}
-#https协议的网站用此配置
-#proxy = {"https": "http://" + ip_port}
+proxy = {"http":"http://" + ip_port, "https": "http://" + ip_port}
 print(proxy)
 headers = {"Proxy-Authorization": auth,"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"}
 #如果返回错误"验证失败，没有传入正确的请求头"，使用 'Xiongmao-Proxy-Authorization'这个请求头认证
@@ -47,7 +44,7 @@ headers = {"Proxy-Authorization": auth,"User-Agent": "Mozilla/5.0 (Windows NT 10
 #r = requests.get("https://api.ip.la", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 print(headers)
 #http协议可用性检测，每访问一次返回的结果换一个IP即为代理成功
-r = requests.get("http://2021.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
+r = requests.get("http://2022.ip138.com", headers=headers, proxies=proxy, verify=False,allow_redirects=False)
 #https协议可用性检测，每访问一次返回的结果换一个IP即为代理成功
 #r = requests.get("https://ip.cn/",headers=headers,proxies=proxy,verify=False,allow_redirects=False)
 print(r.encoding)
