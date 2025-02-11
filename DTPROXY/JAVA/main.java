@@ -21,7 +21,7 @@ public class TestDynamic {
 	}
 
 	public static void main(String[] args) throws IOException {
-		final String url = "http://2022.ip138.com";
+		final String url = "https://httpbin.org/ip";
 		final int port = 8089;//这里以正式服务器端口地址为准
 		final String ip = "dtbf.xiongmaodaili.com";//这里以正式服务器ip地址为准
 		//动态并发产品代理设置为dtbf.xiongmaodaili.com:8089, 动态按量产品需将代理设置为dtan.xiongmaodaili.com:8088

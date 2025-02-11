@@ -20,7 +20,7 @@ public class TestProxyExamples {
 
 	public static void main(String[] args) {
 		try {
-			final String url = "http://2022.ip138.com";
+			final String url = "https://httpbin.org/ip";
 
 			final String ip = "dtqybf.xiongmaodaili.com";//这里以正式服务器ip地址为准
 			//企业动态按并发

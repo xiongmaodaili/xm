@@ -24,7 +24,7 @@ proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
     }
 proxy = {"http": proxyMeta, "https": proxyMeta}
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"}
-r = requests.get("https://2022.ip138.com", headers=headers, proxies=proxy, verify=False, allow_redirects=False)
+r = requests.get("https://httpbin.org/ip", headers=headers, proxies=proxy, verify=False, allow_redirects=False)
 r.encoding='utf8'
 print(r.status_code)
 print(r.text)

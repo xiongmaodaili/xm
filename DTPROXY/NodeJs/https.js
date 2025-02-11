@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+﻿const crypto = require('crypto');
 const url = require('url');
 const https = require('https');
 const HttpsProxyAgent = require('https-proxy-agent'); //第三方包,请安装
@@ -20,7 +20,7 @@ var proxy = process.env.http_proxy || 'http://dtan.xiongmaodaili.com:8088';
 console.log('using proxy server %j', proxy);
 
 // HTTPS endpoint for the proxy to connect to
-var endpoint = process.argv[2] || 'https://2022.ip138.com';
+var endpoint = process.argv[2] || 'https://httpbin.org/ip';
 console.log('attempting to GET %j', endpoint);
 var options = url.parse(endpoint);
 options.headers = {

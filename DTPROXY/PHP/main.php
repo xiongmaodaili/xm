@@ -21,7 +21,7 @@ public function immediate(){
     ));
 
   curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11');
-    curl_setopt($ch, CURLOPT_REFERER,"https://2022.ip138.com);
+    curl_setopt($ch, CURLOPT_REFERER,"https://httpbin.org/ip");
     curl_setopt($ch, CURLOPT_ENCODING, "gzip, deflate, sdch");
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_URL, $url);
